@@ -241,7 +241,7 @@ function onFrame(event) {
 }
 
 var socket = io(); //1
-    var user = {};
+var user = {};
 
 $(document).ready(function() {
     
@@ -253,6 +253,22 @@ $(document).ready(function() {
         socket.emit('thankyou', { msg: 'Thank you for connecting me! -Client' }); //6
     });
     console.log("ready")
+
+    $('#submit').click(function(e){
+        e.preventDefault();
+        if ($('#player_name').val() !== "") {
+            var data = {};
+            data.user = user;
+            data.user.name = $('#player_name').val();
+            socket.emit('senduser', data);
+            $('#myCanvas').show();
+            $('#login').hide();
+            
+        } else {
+            
+            alert("Input name dude!");
+        }
+    });
 
 });
 
