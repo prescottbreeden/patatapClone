@@ -76,13 +76,25 @@
             </div>
             <div class="horizontal-line"></div>
         </div>
-        <div class="user_input">
+        <div class="user_input float">
             <form action="/userResponse" method="post">
                 <div class="line">
                     <input type="text" name="answerbox" id="answerbox">
                     <button type="submit" class="send-btn">Send!</button>
                 </div>
             </form>
+        </div>
+        <div class="question float slide-in">
+            <h3>Predict the output of the following function:</h3>
+            <hr>
+            <div class="question-function" id="quiestion_function">
+                <p class="zero">function yoMamma(num) {</p>
+                <p class="twenty-five">for(let i = 0; i < num; i++) {</p>
+                <p class="fifty">console.log(i);</p>
+                <p class="twenty-five">}</p>
+                <p class="zero">}</p>
+                <p class="center_function">yoMamma(8)</p>
+            </div>
         </div>
     </div>
 </body>
