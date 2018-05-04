@@ -1,0 +1,25 @@
+{
+  "name": "patatapClone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prescottbreeden/patatapClone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prescottbreeden/patatapClone/issues"
+  },
+  "homepage": "https://github.com/prescottbreeden/patatapClone#readme",
+  "dependencies": {
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0"
+  }
+}
