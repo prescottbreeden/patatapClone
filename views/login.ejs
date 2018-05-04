@@ -6,31 +6,103 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <script src="./js/login.js"></script>
     <title>What the Func</title>
 </head>
 <body>
-    <div class="header">
-        <h1>What the Func?!</h1>
-    </div>
     <div class="wrapper">
-        <div class="content">
+            <canvas id="myCanvas" resize></canvas>
+        <div class="content side-bar">
+            <div class="center-text">
+                <h1>What the Func?!</h1>
+                <h2>Players Online</h2>
+            </div>
+            <div class="horizontal-line"></div>
             <div class="line">
-                <div class="block">
+                <div class="block bold">
+                    <p>Name</p>
+                </div>
+                <div class="block bold">
+                    <p>Score</p>
                 </div>
             </div>
-            <form action="/sound" method="get">
+            <div class="horizontal-line"></div>
+            <div class="list-players" id="list_players">
+            <!-- Target this div for adding players -->
+            <!-- use the html below for jquery -->
+            <!-- <div class="line">
+                    <div class="block">
+                        <p>Javier</p>
+                    </div>
+                    <div class="block">
+                        <p>20 pts.</p>
+                    </div>
+                </div> -->
                 <div class="line">
                     <div class="block">
-                        <label for="player_name">Player Name:</label>
+                        <p>Javier</p>
                     </div>
                     <div class="block">
-                        <input type="text" name="player_name" id="player_name">
+                        <p>20 pts.</p>
                     </div>
                 </div>
-                <button type="submit" class="btn" id="submit">Submit</button> 
+                <div class="line">
+                    <div class="block">
+                        <p>Silver Jew</p>
+                    </div>
+                    <div class="block">
+                        <p>5 pts.</p>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="block">
+                        <p>pb1337</p>
+                    </div>
+                    <div class="block">
+                            <p>20 pts.</p>
+                        </div>
+                </div>
+                <div class="line">
+                    <div class="block">
+                        <p>ThyDev</p>
+                    </div>
+                    <div class="block">
+                        <p>20 pts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="horizontal-line"></div>
+        </div>
+        <div class="user_input float">
+            <form action="/userResponse" method="post">
+                <div class="line">
+                    <input type="text" name="answerbox" id="answerbox">
+                    <button type="submit" class="send-btn">Send!</button>
+                </div>
             </form>
+        </div>
+        <div class="enter_name login_float">
+            <div class="wrapper">
+                <div class="content">
+                    <div class="line">
+                        <div class="block">
+                            Enter a Name to Play!
+                        </div>
+                    </div>
+                    <form action="/game" method="post">
+                        <div class="line">
+                            <div class="block">
+                                <label for="player_name">Player Name:</label>
+                            </div>
+                            <div class="block">
+                                <input type="text" name="player_name" id="player_name">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn" id="submit">Submit</button> 
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </body>

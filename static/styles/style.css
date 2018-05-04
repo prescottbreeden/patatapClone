@@ -140,6 +140,13 @@ footer {
 	left: 15%;
 	border-radius: 10px;
 }
+.login_float {
+	background-color: white;
+	/* width: 50%; */
+	position: fixed;
+	left: 25%;
+	border-radius: 10px;
+}
 .user_input {
 	bottom: 50px;
 	line-height: 20px;
@@ -164,6 +171,13 @@ footer {
 .question {
     border: 1px solid Black;
     text-align: center;
+	background-color: white;
+	top: 20%;
+	box-shadow: 2px 2px 2px grey;
+}
+.enter_name {
+	border: 1px solid Black;
+	text-align: center;
 	background-color: white;
 	top: 20%;
 	box-shadow: 2px 2px 2px grey;

@@ -84,6 +84,10 @@ app.get('/sound', function(req, res) {
 })
 
 app.get('/', function(request, response) {
+    response.render('login');
+});
+
+app.post('/game', function(request, response) {
     response.render('game');
 });
 
