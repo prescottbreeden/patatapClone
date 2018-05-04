@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+* {
+  margin: 0;
+  padding: 0;
+}
 canvas {
 width: 100%;
 height: 100%;
@@ -7,4 +12,149 @@ background: black;
 body, html {
   height: 100%;
   margin: 0;
+}
+body {
+	padding-bottom: 20px;
+	font-family: 'Raleway', sans-serif;
+}
+input {
+    border-radius: 3px;
+    padding: 2px;
+}
+footer {
+	position: fixed;
+	bottom: 0;
+	padding-left: 14px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(71, 91, 80);
+    color: white;
+    padding: 20px;
+}
+.logo_image {
+    width: 50px;
+    height: 50px;
+}
+.btn {
+	padding: 10px;
+	border-radius: 5px;
+	width: 80%;
+	position: relative;
+	background-color:  rgb(45, 45, 199);
+	color: white;
+	box-shadow: 2px 2px 0px black;
+}
+.submit {
+	/* background-color: pink; */
+	width: 100%;
+	justify-content: center;
+	display: inline-flex;
+}
+.btn:hover {
+	background-color: rgb(2, 133, 7);
+	color: white;
+	transition-duration: .25s;
+}
+.wrapper {
+	display: flex;
+	width: 80%;
+	justify-content: space-around;
+	margin: 0 auto;
+}
+.content {
+	display: flex;
+	margin-top: 40px;
+	flex-direction: column;
+	width: 400px;
+	/* border: 1px dashed red; */
+	padding: 10px;
+}
+.user-data {
+	width: 500px;
+}
+.line {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    min-height: 20px;
+    /* border: 1px dashed red; */
+}
+.block {
+    display: inline-block;
+    margin: 0 5px;
+    flex-basis: 200px;
+    /* border: 1px dashed blue; */
+}
+.err-message {
+    color: red;
+}
+.red {
+    color: red;
+}
+.errors {
+    min-height: 12px;
+    font-size: 12px;
+    color: red;
+}
+.registration_divider {
+	width: 1px;
+	margin: 80px 50px;
+	border-right: 2px solid grey;
+}
+.logged_in {
+	display: none;
+}
+.welcome {
+	text-align: center;
+	transition-duration: 1s;
+	animation-name: slide_up;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+.error_messages{
+	margin: 0 auto;
+	color: red;
+	text-align: center;
+}
+.single_post {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+}
+@keyframes grow {
+	0% {
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.5);
+	}
+}
+@keyframes slide_up{
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
 }
