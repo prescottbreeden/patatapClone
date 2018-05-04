@@ -251,6 +251,7 @@ $(document).ready(function() {
         // initMessage(data.messages);
         console.log(data)
         socket.emit('thankyou', { msg: 'Thank you for connecting me! -Client' }); //6
+        $('#quiestion_function').html('<h1 class="fifty">' + data.question + '</h1>');
     });
     console.log("ready")
 
@@ -270,6 +271,19 @@ $(document).ready(function() {
         }
     });
 
+    $('.send-btn').click(function(e){
+        e.preventDefault();
+        var data = $('#answerbox').val();
+        // data.user = user;
+        $('#answerbox').val('');
+        socket.emit("answer", data);
+
+    });
+
+    socket.on('newquestion', function(data){
+        console.log(data);
+        $('#quiestion_function').html('<h1 class="fifty">' + data.question + '</h1>');
+    });
 });
 
 function onKeyDown(event) {

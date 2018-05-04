@@ -23,27 +23,32 @@ function getRandomInt(min, max) {
 }
 
 var generateQuestion = (level = 1) => {
+    let num1, num2, operand;
     if (level === 1) {
-        const num1 = getRandomInt(1, 100);
-        const num2 = getRandomInt(1, 100);
-        const operand = operands[getRandomInt(0,2)];
+         num1 = getRandomInt(1, 100);
+         num2 = getRandomInt(1, 100);
+         operand = operands[getRandomInt(0,2)];
         
     }
     return {
-        question: num1 + " " + operand + " " + num1,
+        question: num1 + " " + operand + " " + num2,
         answer: operand === "+" ? num1 + num2 : operand === "-" ? num1 - num2 : num1 * num2
     }
 }
 
-io.on('connection', function (socket) { //2
+io.on('connection', function (socket) { 
     console.log(socket.id);
     users.push({
         id: socket.id
     })
+    if (questions.length == 0) {
+        questions[0] = generateQuestion();
+    } 
     socket.emit('greeting', {
             user_id: socket.id, 
-            msg: 'Greetings, from server Node, brought to you by Sockets! -Server' 
-    }); //3
+            msg: 'Greetings, from server Node, brought to you by Sockets! -Server' ,
+            question: questions[0].question
+    });
 
     socket.broadcast.emit('online_user', { socket_id: socket.id}); // Send to others
 
@@ -73,8 +78,12 @@ io.on('connection', function (socket) { //2
     });
 
     socket.on('answer', (data)=>{
-        if (question.answer === data.answer) {
-
+        console.log("answer", data);
+        console.log("server ans", questions[0].answer);
+        if (questions[0].answer == data) {
+            questions[0] = generateQuestion();
+            console.log(questions[0]);
+            io.emit("newquestion", questions[0]);
         }
     });
 });
