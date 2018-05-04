@@ -46,7 +46,7 @@ app.get('/login', function(req, res) {
 })
 
 app.get('/', function(request, response) {
-    response.render('index');
+    response.render('login');
 });
 
 
