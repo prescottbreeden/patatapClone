@@ -159,6 +159,67 @@ var keyData = {
           src: ['sounds/moon.mp3']
         }),
         color: '#2c3e50'
+    },
+
+    1: {
+        sound: new Howl({
+          src: ['sounds/bubbles.mp3']
+        }),
+        color: '#1abc9c'
+    },
+    2: {
+        sound: new Howl({
+          src: ['sounds/clay.mp3']
+        }),
+        color: '#2ecc71'
+    },
+    3: {
+        sound: new Howl({
+          src: ['sounds/confetti.mp3']
+        }),
+        color: '#3498db'
+    },
+    4: {
+        sound: new Howl({
+          src: ['sounds/corona.mp3']
+        }),
+        color: '#9b59b6'
+    },
+    5: {
+        sound: new Howl({
+          src: ['sounds/dotted-spiral.mp3']
+        }),
+        color: '#34495e'
+    },
+    6: {
+        sound: new Howl({
+          src: ['sounds/flash-1.mp3']
+        }),
+        color: '#16a085'
+    },
+    7: {
+        sound: new Howl({
+          src: ['sounds/flash-2.mp3']
+        }),
+        color: '#27ae60'
+    },
+    8: {
+        sound: new Howl({
+          src: ['sounds/flash-3.mp3']
+        }),
+        color: '#2980b9'
+    },
+    9: {
+        sound: new Howl({
+            src: ['sounds/glimmer.mp3']
+        }),
+        color: '#8e44ad'
+    },
+    0: {
+        sound: new Howl({
+          src: ['sounds/moon.mp3']
+        }),
+        color: '#2c3e50'
     }
 }
 
