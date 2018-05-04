@@ -28,6 +28,11 @@ io.on('connection', function (socket) { //2
         console.log(data.msg); //8 (note: this log will be on your server's terminal)
     });
 
+    socket.on('soundkey', (key) => {
+        console.log(key);
+        socket.broadcast.emit('playsound', key);
+    });
+
     socket.on('senddata', function(data){
         messages.push(data);
         // socket.broadcast.emit('counting', { counting: counter }); // Send to others
