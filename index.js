@@ -41,7 +41,9 @@ io.on('connection', function (socket) { //2
     });
 });
 
-
+app.get('/login', function(req, res) {
+    res.render('login');
+})
 
 app.get('/', function(request, response) {
     response.render('index');
