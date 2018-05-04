@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>What the Func</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <script src="./js/login.js"></script>
+    <title>What the Func</title>
 </head>
 <body>
     <div class="header">
@@ -17,8 +20,8 @@
                 <div class="block">
                 </div>
             </div>
-            <form action="/newuser" method="post">
-            <div class="line">
+            <form action="/sound" method="get">
+                <div class="line">
                     <div class="block">
                         <label for="player_name">Player Name:</label>
                     </div>
@@ -26,7 +29,7 @@
                         <input type="text" name="player_name" id="player_name">
                     </div>
                 </div>
-                <button type="submit" class="btn">Submit</button> 
+                <button type="submit" class="btn" id="submit">Submit</button> 
             </form>
         </div>
     </div>

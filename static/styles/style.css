@@ -194,3 +194,32 @@ footer {
         display: none;
     }
 }
+.main {
+
+}
+#myCanvas {
+	display: none;
+	/* z-index: 0; */
+}
+#login {
+	width: 300px;
+	height: 200px;
+	/* position: fixed;
+	 */
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	/* z-index: 1; */
+}
+
+#container {
+	position: relative;
+  }
+  #container canvas, #overlay {
+	position: absolute;
+  }
+  canvas {
+	/* border: 1px solid black; */
+  }
